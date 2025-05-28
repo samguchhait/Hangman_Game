@@ -37,13 +37,12 @@ class HumanPlayer(Player):
 
 class ComputerPlayer(Player):
     def __init__(self, name, vocab):
+        super().__init__(name)
         self.vocab = [word.upper() for word in vocab]
 
     def turn(self, game_state):
         unguessed_letters = [letter for letter in "ABCDEFGHIJKLMNOPQRSTUVWXYZ" if letter not in game_state.guesses]
-
-
-
+        return choice(unguessed_letters) if unguessed_letters else ''
 
 class GameState:
     """Provide information on the current state of the game. Used in the
