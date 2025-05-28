@@ -1,1 +1,2 @@
-# Hangman_Game
+# Two Player Hangman Game
+
